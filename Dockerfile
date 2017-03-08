@@ -15,4 +15,4 @@ COPY rcS ufw unifi /etc/default/
 HEALTHCHECK CMD /usr/local/bin/unifi-healthcheck
 EXPOSE 3478 8080 8443 8880 8843
 CMD ["/etc/init.d/unifi","start"]
-USER unifi
+# TODO cross-build seems to not support starting as non-root USER unifi
